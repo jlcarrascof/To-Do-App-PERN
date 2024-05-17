@@ -8,6 +8,8 @@ const pool = require('./db')
 app.get('/todos', async (req, res) => {
     try {
         // await
+        const todos = await pool.query('SELECT * FROM todos')
+        res.json(todos.rows)
     } catch (err) {
         console.error(error)
     }
