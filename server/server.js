@@ -10,7 +10,7 @@ app.get('/todos', async (req, res) => {
         // await
         const todos = await pool.query('SELECT * FROM todos')
         res.json(todos.rows)
-    } catch (err) {
+    } catch (error) {
         console.error(error)
     }
 })
