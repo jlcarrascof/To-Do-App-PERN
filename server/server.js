@@ -1,11 +1,14 @@
 const PORT = process.env.PORT ?? 8000
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const pool = require('./db')
 
 // Get all TODOS ...
 
-app.get('/todos', async (req, res) => {
+app.use(cors())
+
+app.get('/todos/', async (req, res) => {
     console.log(req)
     const userEmail = req.params
 
