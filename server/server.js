@@ -6,9 +6,10 @@ const pool = require('./db')
 // Get all TODOS ...
 
 app.get('/todos', async (req, res) => {
+    const userEmail = 'javier@test.com'
+
     try {
-        // await
-        const todos = await pool.query('SELECT * FROM todos')
+        const todos = await pool.query('SELECT * FROM todos WHERE user_email = $1', [userEmail])
         res.json(todos.rows)
     } catch (error) {
         console.error(error)
