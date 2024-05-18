@@ -19,6 +19,9 @@ const App = () => {
 
   useEffect(() => getData, [])
   console.log(tasks)
+  // Sort by Date:
+
+  const sortedTasks = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date))
 
   return (
     <div className="app">
