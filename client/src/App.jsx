@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import ListHeader from "./components/ListHeader"
 
 const App = () => {
@@ -11,6 +12,8 @@ const App = () => {
       console.error(err)
     }
   }
+
+  useEffect(() => getData, [])
 
   return (
     <div className="app">
