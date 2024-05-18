@@ -6,7 +6,8 @@ const pool = require('./db')
 // Get all TODOS ...
 
 app.get('/todos', async (req, res) => {
-    const userEmail = 'javier@test.com'
+    console.log(req)
+    const userEmail = req.params
 
     try {
         const todos = await pool.query('SELECT * FROM todos WHERE user_email = $1', [userEmail])
