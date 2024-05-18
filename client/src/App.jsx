@@ -1,22 +1,24 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import ListHeader from "./components/ListHeader"
 
 const App = () => {
 
-  const getData = async () => {
+  const userEmail = 'javier@test.com'
+  const [ tasks, setTasks ] = useState(null)
 
-    const userEmail = 'javier@test.com'
+  const getData = async () => {
 
     try {
       const response = await fetch(`http://localhost:8000/todos/${userEmail}`)
       const json = await response.json()
-      console.log(json)
+      setTasks(json)
     } catch (err) {
       console.error(err)
     }
   }
 
   useEffect(() => getData, [])
+  console.log(tasks)
 
   return (
     <div className="app">
