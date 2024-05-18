@@ -4,6 +4,9 @@ import ListHeader from "./components/ListHeader"
 const App = () => {
 
   const getData = async () => {
+
+    const userEmail = 'javier@test.com'
+
     try {
       const response = await fetch(`http://localhost:8000/todos/${userEmail}`)
       const json = await response.json()
