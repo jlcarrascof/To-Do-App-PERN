@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ListHeader from "./components/ListHeader"
+import ListItem from "./components/ListItem"
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
   return (
     <div className="app">
       <ListHeader listName = {'🏝️ Holiday tick list'} />
+      {sortedTasks?.map(<ListItem />)}
     </div>
   )
 }
