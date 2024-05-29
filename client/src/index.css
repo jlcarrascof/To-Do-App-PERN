@@ -40,7 +40,6 @@ body {
 }
 
 .edit:active {
-    border: 1.5px solid rgb(141, 181, 145);
     color: rgb(255, 255, 255);
     background-color: rgb(141, 181, 145);
 }
@@ -58,6 +57,21 @@ body {
 .delete:active {
     color: rgb(255, 255, 255);
     background-color: rgb(255, 175, 163);
+}
+
+.create {
+    border: 1.5px solid rgb(108, 115, 148);
+    color: rgb(108, 115, 148);
+    text-transform: uppercase;
+}
+
+.create:hover {
+    background-color: rgb(131, 138, 172);
+}
+
+.create:active {
+    background-color: rgb(108, 115, 148);
+    color: rgb(255, 255, 255);
 }
 
 /* List Header */
