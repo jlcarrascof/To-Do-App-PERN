@@ -1,8 +1,9 @@
 const Modal = () => {
-
     return (
-      <div>
+      <div className="overlay">
+        <div className="modal">
 
+        </div>
       </div>
     )
 }
