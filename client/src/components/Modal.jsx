@@ -1,6 +1,9 @@
 const Modal = () => {
 
     const mode = "edit"
+    const handleChange = () => {
+        console.log("Changing...")
+    }
 
     return (
       <div className="overlay">
@@ -19,6 +22,7 @@ const Modal = () => {
               value={""}
               onChange={handleChange}
             />
+            <br />
             <input />
             <input type="submit" />
           </form>
