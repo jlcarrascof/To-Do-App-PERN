@@ -11,8 +11,8 @@ const Modal = () => {
         date: editMode ? "" : new Date()
     })
 
-    const handleChange = () => {
-        console.log("Changing...")
+    const handleChange = (e) => {
+        console.log("Changing...", e)
     }
 
     return (
