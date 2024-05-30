@@ -1,8 +1,10 @@
+import Modal from "./Modal"
+
 const ListHeader = ({ listName }) => {
 
-  const signOut = () => {
-    console.log('sign out')
-  }
+    const signOut = () => {
+      console.log('sign out')
+    }
 
     return (
       <div className="list-header">
@@ -11,6 +13,7 @@ const ListHeader = ({ listName }) => {
           <button className="create">ADD NEW</button>
           <button className="signout" onClick={signOut}>SIGN OUT</button>
         </div>
+        <Modal />
       </div>
     )
 }
